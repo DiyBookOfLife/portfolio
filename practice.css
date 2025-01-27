@@ -9,6 +9,7 @@ body {
 
 li {
     font-size: 20px;
+    list-style: none;
 }
 
 h1 {
@@ -23,36 +24,36 @@ h2 {
     margin-bottom: 0;
 }
 
-li {
-    list-style: none;
-}
 
+
+/*All header*/
 header.mainmenu {
+    display: flex;/**FLEX BOX**/
     background-color: rgba(197, 122, 185, 0.10);
     height: 70px;
     content: none;
     align-items: center;
     color: rgb(240, 168, 234);
     padding: 20px 0;
-    display: flex;
 }
 
+/*individual header*/
 header.mainmenu ul {
-    display: flex;
-    font-size: 85%;
-    list-style: none;
+    display: flex; /**FLEX BOX**/ 
+    flex-direction: row;                        
     gap: 40px;
     padding: 0;
-    position: absolute;
 }
 
+/*Sticky banner*/
 .sticky {
     position: sticky;
     top: 0;
 }
 
+/*All Footer*/
 .contact {
-    display: flex;
+    display: flex; /**FLEX BOX**/
     font-size: large;
     background-color: rgba(197, 122, 185, 0.10);
     height: 30px;
@@ -60,11 +61,17 @@ header.mainmenu ul {
     padding: 20px 0;
 }
 
+/*Footer individual*/
 .contact li {
-    margin: 2px;
+    margin: 4px;
+    border: 1px solid red;
+    text-align: center;
+    border-radius: 25px;
 }
 
 .step-title {
+    display: flex; /**FLEX BOX**/
+    flex-direction: column;
     color: rgb(240, 168, 234);
     font-size: 25px;
 }
@@ -77,6 +84,32 @@ header.mainmenu ul {
     font-size: 35px;
 }
 
+/*all boxes*/
+.container {
+    display: grid;
+    /** grid **/
+    width: 100%;
+    margin: auto;
+    grid-template-columns: 35vw 35vw;
+    grid-template-rows: 45vh 45vh;
+    grid-gap: 15px;
+    grid-area:
+        "top top"
+        "bottomLeft bottomRight";
+    border: 2px solid rgb(247, 182, 96);/**border around whole container**/
+    justify-content: center;/** center text in boxes**/
+}
+
+/*individual boxes*/
+.box {
+    display: flex;
+    /** flex **/
+    align-items: center;
+    /** center text within box**/
+    justify-content: center;
+    border: 1px solid red;
+
+}
 /*just to see boxes - remove later*/
 
 /** * {

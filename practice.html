@@ -9,19 +9,18 @@
 
 <body>
     <header class="mainmenu sticky"> <!-- Banner -->
+        <!-- in-line style OVERRIDE cursive name -->
         <h1 style="color:rgb(199, 88, 182); font-family: 'great vibes';">Toni Thomas</h1>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Git & Github</li>
-            <li>TypeScripting</li>
-
+        <div class="button-container">
+            <button class="button">Education</button>
+            <button class="button">Experience</button>
+            <button class="button">Contact</button>
+            <button class="button">Social Media</button>
+        </div>
         </ul>
     </header>
 
-<h2>*Front End Web Developement*</h2> <!-- Topic -->
+<h2>Front End Web Developement</h2> <!-- Topic -->
 
 <select id="topic-select"> <!-- drop down box -->
   <option value="">--Choose an option--</option>
@@ -33,24 +32,15 @@
   <option value="git&github">Git & GitHub</option>
 </select>
 
+<p>I'm a passionate front-end developer with a strong foundation in HTML, CSS, and JavaScript, complemented by my professional experience in IT support and troubleshooting. I specialize in creating responsive and visually appealing web designs while leveraging problem-solving skills to deliver user-friendly solutions.</p>
 <div class="container"> <!-- all boxes -->
-    <div class="box" id="one">Box 1</div> <!-- individual boxes -->
-    <div class="box" id="two">Box 2</div>
-    <div class="box" id="three">Box 3</div>
-    <div class="box" id="four">Box 4</div>
-    <div class="box" id="five">Box 5</div>
-    <div class="box" id="six">Box 6</div>
-    <div class="box" id="seven">Box 7</div>
+    <div class="box" id="one">HTML</div> <!-- individual boxes -->
+    <div class="box" id="two">CSS</div>
+    <div class="box" id="three">JavaScript</div>
+    <div class="box" id="four">Python</div>
+    <div class="box" id="five">Shell Scripting</div>
+    <div class="box" id="six">Git & GitHub</div>
 </div>
-
-
-<footer> <!-- Footer -->
-    <ul class="contact">
-        <li >Phone</li>
-        <li >Email</li>
-        <li >LinkedIn</li>
-
-    </ul>
-</footer>
+<footer class="foot"></footer>
 </body>
 </html>

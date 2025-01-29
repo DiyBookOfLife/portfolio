@@ -1,117 +1,151 @@
+/* Body Styling */
 body {
-    background-color: rgba(18, 18, 143, 0.979);
-    background-image: url("https://img.freepik.com/free-photo/acrylic-painting-background-black-wallpaper-image_53876-108339.jpg?t=st=1737844597~exp=1737848197~hmac=69beffd7cc1c5a95d67e6f3ec8e964d8116b721cfec8c81969866d62349805b3&w=1380");
-    background-size: cover;
-    color: rgb(237, 243, 223);
-    font-size: 25px;
-    text-align: center;
-}
-
-li {
-    font-size: 20px;
-    list-style: none;
-}
-
-h1 {
-    color: rgba(248, 57, 216, 0.918);
-    margin-right: 20%;
-    margin-left: 2%;
-    font-size: 100px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-h2 {
-    margin-bottom: 0;
-}
-
-
-
-/*All header*/
-header.mainmenu {
-    display: flex;/**FLEX BOX**/
-    background-color: rgba(197, 122, 185, 0.10);
-    height: 70px;
-    content: none;
-    align-items: center;
-    color: rgb(240, 168, 234);
-    padding: 20px 0;
-}
-
-/*individual header*/
-header.mainmenu ul {
-    display: flex; /**FLEX BOX**/ 
-    flex-direction: row;                        
-    gap: 40px;
-    padding: 0;
-}
-
-/*Sticky banner*/
-.sticky {
-    position: sticky;
-    top: 0;
-}
-
-/*All Footer*/
-.contact {
-    display: flex; /**FLEX BOX**/
-    font-size: large;
-    background-color: rgba(197, 122, 185, 0.10);
-    height: 30px;
-    color: rgb(240, 168, 234);
-    padding: 20px 0;
-}
-
-/*Footer individual*/
-.contact li {
-    margin: 4px;
-    border: 1px solid red;
-    text-align: center;
-    border-radius: 25px;
-}
-
-.step-title {
-    display: flex; /**FLEX BOX**/
-    flex-direction: column;
-    color: rgb(240, 168, 234);
-    font-size: 25px;
-}
-
-#topic-select {
-    color: rgb(168, 41, 41);
-}
-
-#roadmap {
-    font-size: 35px;
-}
-
-/*all boxes*/
-.container {
-    display: grid;
-    /** grid **/
+    background-color: rgba(18, 18, 143, 0.979); /* Set background color with a blue shade and transparency */
+    background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set background image */
+    background-size: cover; /* Ensure the background image covers the entire body */
+    color: rgb(237, 243, 223); /* Set text color to a light cream shade */
+    font-size: 25px; /* Set font size for text */
+    text-align: center; /* Center align text horizontally */
+    display: flex; /* Use flexbox layout to position content */
+    flex-direction: column; /* Stack elements vertically (default is row) */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top of the viewport */
+    height: 100vh; /* Set body height to full viewport height */
     width: 100%;
-    margin: auto;
-    grid-template-columns: 35vw 35vw;
-    grid-template-rows: 45vh 45vh;
-    grid-gap: 15px;
-    grid-area:
-        "top top"
-        "bottomLeft bottomRight";
-    border: 2px solid rgb(247, 182, 96);/**border around whole container**/
-    justify-content: center;/** center text in boxes**/
 }
 
-/*individual boxes*/
-.box {
-    display: flex;
-    /** flex **/
-    align-items: center;
-    /** center text within box**/
-    justify-content: center;
-    border: 1px solid red;
+/* Container to hold the buttons */
+.button-container {
+    display: flex; /* Use flexbox layout for horizontal arrangement */
+    gap: 20px; /* Space out the buttons with 20px gap between them */
+}
 
+/* Header background */
+header.mainmenu {
+    display: flex; /* Use flexbox layout for header */
+    left: 0;
+    width: 100%;
+    justify-content: center; /* Center the contents (buttons) horizontally */
+    background-color: rgba(197, 122, 185, 0.10); /* Set background color with slight transparency */
+    height: 70px; /* Set header height */
+    align-items: center; /* Align items vertically in the header */
+    color: rgb(240, 168, 234); /* Set text color for header elements */
+    padding: 20px 0; /* Add padding inside the header */
+}
+
+/* Buttons inside the header */
+header.mainmenu .button {
+    color: rgb(187, 94, 171); /* Set button text color */
+    background-color: rgb(82, 28, 75); /* Set button background color */
+    margin: 6px; /* Add margin around the buttons */
+    text-align: center; /* Center text inside the button */
+    height: 35px; /* Set button height */
+    width: 100%;/* Make sure the footer spans the full width */
+    border-radius: 5px; /* Round the button corners */
+    padding: 0 10px; /* Add padding to the left and right of buttons */
+}
+
+/* Banner individual list */
+li {
+    margin-left: 3%; /* Add left margin for the list items */
+    font-size: 20px; /* Set font size for the list items */
+    list-style: none; /* Remove the default list bullet style */
+}
+
+/* Cursive Name styling */
+h1 {
+    margin-right: 350px; /* Add right margin for alignment */
+    margin-left: 60px; /* Add left margin for alignment */
+    margin-bottom: 25px; /* Add bottom margin */
+    font-size: 100px; /* Set font size for the heading */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Set font family */
+}
+
+/* Sticky banner (header stays on top when scrolling) */
+.sticky {
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Keep it at the top of the viewport */
+    z-index: 1000;
+}
+
+/* Topic header */
+h2 {
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Dropdown Box Styling */
+#topic-select {
+    margin: .5cm; /* Add margin around the dropdown box */
+    color: rgb(168, 41, 41); /* Set text color for dropdown options */
+}
+
+/* Paragraph Styling */
+p {
+    display: flex; /* Use flexbox to layout paragraph */
+    align-items: center; /* Center the text vertically within the paragraph */
+    justify-content: center; /* Center the text horizontally */
+    padding: 10px; /* Add padding around the paragraph */
+    width: 600px; /* Set width of the paragraph */
+    height: 300px; /* Set height of the paragraph */
+    margin: 20px 0; /* Add vertical margin to separate from other elements */
+}
+
+/* Container for the boxes */
+.container {
+    display: grid; /* Use CSS Grid layout for the container */
+    margin: .75cm; /* Add margin around the container */
+    grid-template-columns: 15vw 15vw 15vw; /* Set grid columns with relative width */
+    grid-template-rows: 15vh 15vh; /* Set grid rows with relative height */
+    grid-gap: 15px; /* Add space between the grid items */
+    justify-content: center; /* Center the grid content */
+}
+
+/* Individual box styling */
+.box {
+    display: flex; /* Use flexbox for centering content inside the box */
+    align-items: center; /* Center content vertically inside the box */
+    justify-content: center; /* Center content horizontally inside the box */
+    border: 1px solid rgba(228, 105, 187, 0.1); /* Add a border around the box */
+    background-color: rgba(228, 105, 187, 0.1); /* Set background color inside the box */
+    border-radius: 25px; /* Add rounded corners to the box */
+}
+
+/* Footer container styling */
+.contact {
+    display: flex; /* Use flexbox layout for the footer */
+    font-size: large; /* Set font size for the footer text */
+    background-color: rgba(214, 141, 202, 0.1); /* Set background color with slight transparency */
+    height: 30px; /* Set footer height */
+    color: rgb(240, 168, 234); /* Set text color */
+    padding: 20px 0; /* Add padding inside the footer */
+}
+
+/* Footer button styling */
+.contact button {
+    display: flex; /* Use flexbox for centering button text */
+    justify-content: center; /* Align button text horizontally */
+    align-items: center; /* Align button text vertically */
+    color: rgb(187, 94, 171); /* Set button text color */
+    margin: 6px; /* Add margin around the button */
+    text-align: center; /* Center text inside the button */
+    height: 30px; /* Set button height */
+    border-radius: 10px; /* Add rounded corners to the button */
+}
+
+.foot {
+    display: flex; /* Use flexbox layout for header */
+    justify-content: center; /* Center the contents (buttons) horizontally */
+    background-color: rgba(197, 122, 185, 0.10); /* Set background color with slight transparency */
+    height: 70px; /* Set footer height */
+    width: 100%; /* Make sure the footer spans the full width */
+    align-items: center; /* Align items vertically in the footer */
+    color: rgb(240, 168, 234); /* Set text color for footer elements */
+    padding: 20px ; /* Add padding inside the footer */
+    position: relative;
+    left: 0;
 }
 /*just to see boxes - remove later*/
 
-/** * {
+/*** {
     border: 1px solid red !important;
 }

@@ -17,7 +17,7 @@ body {
 /* Container to hold the buttons */
 .button-container {
     display: flex; /* Use flexbox layout for horizontal arrangement */
-    gap: 20px; /* Space out the buttons with 20px gap between them */
+    gap: 30px; /* Space out the buttons with 20px gap between them */
 }
 
 /* Header background */
@@ -35,8 +35,8 @@ header.mainmenu {
 
 /* Buttons inside the header */
 header.mainmenu .button {
-    color: rgb(187, 94, 171); /* Set button text color */
-    background-color: rgb(82, 28, 75); /* Set button background color */
+    color: rgb(247, 243, 246); /* Set button text color */
+    background-color: rgb(139, 61, 129);
     margin: 6px; /* Add margin around the buttons */
     text-align: center; /* Center text inside the button */
     height: 35px; /* Set button height */

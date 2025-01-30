@@ -1,0 +1,31 @@
+body{
+    background-image: url("https://images.unsplash.com/photo-1497621122273-f5cfb6065c56?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") ;
+}
+.container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 10vw 10vw 10vw;
+    grid-gap: 95px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(247, 243, 246); /* Set button text color */
+    background-color: rgb(139, 61, 129); /* Set button background color */
+    margin: 6px; /* Add margin around the buttons */
+    text-align: center; /* Center text inside the button */
+    height: 35px; /* Set button height */
+    width: 100%;/* Make sure the footer spans the full width */
+    border-radius: 5px; /* Round the button corners */
+    padding: 0 10px; /* Add padding to the left and right of buttons */
+}
+ #quote{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'great vibes';
+    font-size: 45px;
+    color: azure;
+ }

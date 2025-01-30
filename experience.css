@@ -20,6 +20,19 @@
     background: #F8FA9D;
 }
 
+.homeButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(247, 243, 246); /* Set button text color */
+    background-color: rgb(139, 61, 129); /* Set button background color */
+    margin: 6px; /* Add margin around the buttons */
+    text-align: center; /* Center text inside the button */
+    height: 35px; /* Set button height */
+    width: 100%;/* Make sure the footer spans the full width */
+    border-radius: 5px; /* Round the button corners */
+    padding: 0 10px; /* Add padding to the left and right of buttons */
+}
 .header {
     /* row start/column start/ row end/ column end */
     grid-area: hd;

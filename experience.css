@@ -1,51 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ddbdd5;
+    /* Match toniBlog.html */
+}
+
+/* Layout Grid */
 .container {
-    /* Step 1: Set display to grid */
     display: grid;
-    /* Step 2: setup rows amd columns */
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 250px 600px;
+    grid-template-columns: 1fr 3fr;/* Sidebar takes 1, main takes 3 */
+    grid-template-rows: 80px auto 50px;/* Header, content, footer */
     grid-template-areas:
-        "hd hd hd hd hd hd hd hd"
-        "sd sd main main main main main main"
-        "ft ft ft ft ft ft ft ft";
-    border: 2px solid yellow;
-
+        "hd hd "
+        "sd main "
+        "ft ft ";
+    height: 100vh;
+    gap: 10px;
 }
 
-.box {
-    /* width: 250px;
-    height: 150px; */
-    border: 1px solid red;
-    background: #F8FA9D;
-}
-
-.homeButton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(247, 243, 246); /* Set button text color */
-    background-color: rgb(139, 61, 129); /* Set button background color */
-    margin: 6px; /* Add margin around the buttons */
-    text-align: center; /* Center text inside the button */
-    height: 35px; /* Set button height */
-    width: 100%;/* Make sure the footer spans the full width */
-    border-radius: 5px; /* Round the button corners */
-    padding: 0 10px; /* Add padding to the left and right of buttons */
-}
+/* Header */
 .header {
-    /* row start/column start/ row end/ column end */
     grid-area: hd;
+    background: rgb(22, 21, 22);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-.footer {
-    grid-area: ft;
-}
-
+/* Sidebar */
 .sidebar {
     grid-area: sd;
+    background: lightgray;
+    padding: 20px;
+    display: flex; /* Enables centering */
+    flex-direction: column; /* Align content in a column */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text */
 }
 
-.content {
+/* Main Content */
+.main {
     grid-area: main;
+    padding: 20px;
+}
+
+/* Experience Grid */
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three equal columns */
+    gap: 20px;
+    /* Spacing between boxes */
+    padding: 20px;
+}
+
+/* Experience Box */
+.experience-box {
+    background: rgba(240, 168, 234, 0.8);
+    /* Light purple */
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
+}
+
+/* Typography */
+.company {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.title {
+    font-style: italic;
+    color: #333;
+    margin: 5px 0;
+}
+
+.description ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.description li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+    grid-area: ft;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.quotation {
+    font-size: 24px; /* Increase font size */
+    font-weight: bold; /* Make it more prominent */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-width: 80%; /* Limits width for better readability */
+    margin: 0 auto; /* Centers horizontally */
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 900px) {
+    .experience-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns */
+    }
+}
+
+@media (max-width: 600px) {
+    .experience-container {
+        grid-template-columns: 1fr;
+        /* Single column */
+    }
 }

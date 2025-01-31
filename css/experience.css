@@ -1,13 +1,20 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ddbdd5;
-    /* Match toniBlog.html */
+mainBodybody {
+    background-color: rgba(18, 18, 143, 0.979); /* Set background color with a blue shade and transparency */
+    background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set background image */
+    background-size: cover; /* Ensure the background image covers the entire body */
+    color: rgb(237, 243, 223); /* Set text color to a light cream shade */
+    font-size: 25px; /* Set font size for text */
+    text-align: center; /* Center align text horizontally */
+    display: flex; /* Use flexbox layout to position content */
+    flex-direction: column; /* Stack elements vertically (default is row) */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the top of the viewport */
+    height: 100vh; /* Set body height to full viewport height */
+    width: 100%;
 }
 
 /* Layout Grid */
-.container {
+.experienceContainer {
     display: grid;
     grid-template-columns: 1fr 3fr;/* Sidebar takes 1, main takes 3 */
     grid-template-rows: 80px auto 50px;/* Header, content, footer */
@@ -20,7 +27,7 @@ body {
 }
 
 /* Header */
-.header {
+.experienceHeader {
     grid-area: hd;
     background: rgb(22, 21, 22);
     color: white;
@@ -29,7 +36,8 @@ body {
 }
 
 /* Sidebar */
-.sidebar {
+.experienceSidebar {
+    color: black;
     grid-area: sd;
     background: lightgray;
     padding: 20px;
@@ -41,7 +49,7 @@ body {
 }
 
 /* Main Content */
-.main {
+.experienceMain {
     grid-area: main;
     padding: 20px;
 }
@@ -79,19 +87,19 @@ body {
     margin: 5px 0;
 }
 
-.description ul {
+.experienceDescription ul {
     list-style: none;
     padding: 0;
     text-align: left;
 }
 
-.description li {
+.experienceDescription li {
     font-size: 14px;
     margin-bottom: 5px;
 }
 
 /* Footer */
-.footer {
+.experienceFooter {
     grid-area: ft;
     background: black;
     color: white;

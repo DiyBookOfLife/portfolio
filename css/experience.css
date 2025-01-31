@@ -28,6 +28,9 @@ mainBodybody {
 
 /* Header */
 .experienceHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-area: hd;
     background: rgb(22, 21, 22);
     color: white;

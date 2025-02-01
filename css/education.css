@@ -1,6 +1,5 @@
 body {
     display: box;
-    background-color: rgba(18, 18, 143, 0.979); /* Set background color with a blue shade and transparency */
     background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set background image */
     background-size: cover; /* Ensure the background image covers the entire body */ 
     font-size: 25px; /* Set font size for text */
@@ -11,23 +10,6 @@ body {
     height: 100vh; /* Set body height to full viewport height */
     width: 100%;
     margin: 40px;
-}
-
-.boxDegree, .boxCert {
-    display: flex;
-    grid-template-columns: 15vh;
-    grid-template-rows: 15vh 15vh;
-    align-items: center; /* Stretch vertically */
-    justify-content: center;
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    margin:0;
-    font-size: 150%;
-    width: 70vw; /* Full viewport width */
-    height: 8vh; /* Full viewport height */
-    box-sizing: border-box; /* Ensures padding doesn’t add extra width */
 }
 
 .educationWrapper {
@@ -50,31 +32,9 @@ body {
     font-size: 120%;
     width: 650px;
     height: 500px;
-    margin: 18px;
+    margin: 0%;
 }
 
-#degree + img {
-    display: block;  /* Ensures the image behaves as a block element */
-    margin: 0 auto;  /* Centers the image horizontally */
-    max-width: 100%; /* Prevents it from overflowing */
-    height: auto;    /* Maintains aspect ratio */
-    padding: 40px;
- 
-}
-
-.homeButton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(247, 243, 246); /* Set button text color */
-    background-color: rgb(139, 61, 129); /* Set button background color */
-    margin: 6px; /* Add margin around the buttons */
-    text-align: center; /* Center text inside the button */
-    height: 35px; /* Set button height */
-    width: 150px;/* Make sure the footer spans the full width */
-    border-radius: 5px; /* Round the button corners */
-    padding: 0 10px; /* Add padding to the left and right of buttons */
-}
 
 
 /**media breakpoint**/

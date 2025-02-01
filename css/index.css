@@ -47,7 +47,7 @@ header.mainmenu .button {
 
 /* Cursive Name styling */
 
-.name {
+h1 {
     color: rgb(199, 88, 182);
     font-family: 'great vibes';
     margin-right: 350px; /* Add right margin for alignment */
@@ -76,7 +76,7 @@ header.mainmenu .button {
 
 /* Paragraph Styling */
 .passion {
-    display: flex; /* Use flexbox to layout paragraph */
+    display: block; /* Use flexbox to layout paragraph */
     align-items: center; /* Center the text vertically within the paragraph */
     justify-content: center; /* Center the text horizontally */
     padding: 10px; /* Add padding around the paragraph */
@@ -84,7 +84,6 @@ header.mainmenu .button {
     height: 300px; /* Set height of the paragraph */
     margin: 20px 0; /* Add vertical margin to separate from other elements */
 }
-
 /* Container for the boxes */
 .container {
     display: grid; /* Use CSS Grid layout for the container */
@@ -105,28 +104,7 @@ header.mainmenu .button {
     border-radius: 25px; /* Add rounded corners to the box */
 }
 
-/* Footer container styling */
-.contact {
-    display: flex; /* Use flexbox layout for the footer */
-    font-size: large; /* Set font size for the footer text */
-    background-color: rgba(214, 141, 202, 0.1); /* Set background color with slight transparency */
-    height: 30px; /* Set footer height */
-    color: rgb(240, 168, 234); /* Set text color */
-    padding: 20px 0; /* Add padding inside the footer */
-}
-
-/* Footer button styling */
-.contact button {
-    display: flex; /* Use flexbox for centering button text */
-    justify-content: center; /* Align button text horizontally */
-    align-items: center; /* Align button text vertically */
-    color: rgb(187, 94, 171); /* Set button text color */
-    margin: 6px; /* Add margin around the button */
-    text-align: center; /* Center text inside the button */
-    height: 30px; /* Set button height */
-    border-radius: 10px; /* Add rounded corners to the button */
-}
-
+/* basic footer style - no text */
 .foot {
     display: flex; /* Use flexbox layout for header */
     justify-content: center; /* Center the contents (buttons) horizontally */
@@ -179,6 +157,45 @@ header.mainmenu .button {
     /* Distribute cards evenly in the container */
     gap: 20px;
     /* Space between cards */
+}
+
+/* Responsive header for smaller screens */
+@media screen and (max-width: 768px) { 
+    header.mainmenu {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .name {
+        font-size: 50px; /* Reduce font size for smaller screens */
+        margin: 10px 0; /* Adjust spacing */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Reduce spacing between buttons */
+    }
+
+    header.mainmenu .button {
+        width: 80%; /* Make buttons take up more space */
+        font-size: 18px; /* Adjust button text size */
+    }
+
+}
+
+/* Extra small screens (phones) */
+@media screen and (max-width: 480px) {
+    .name {
+        font-size: 40px; /* Further reduce font size */
+    }
+
+    header.mainmenu .button {
+        width: 100%; /* Full width buttons */
+        font-size: 16px;
+    }
 }
 
 /*just to see boxes - remove later*/

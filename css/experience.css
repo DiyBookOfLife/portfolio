@@ -38,6 +38,18 @@ mainBodybody {
     padding: 20px;
 }
 
+.name {
+    color: rgb(199, 88, 182);
+    font-family: 'great vibes';
+    margin-right: 350px;
+    /* Add right margin for alignment */
+    margin-left: 60px;
+    /* Add left margin for alignment */
+    margin-bottom: 25px;
+    /* Add bottom margin */
+    font-size: 100px;
+    /* Set font size for the heading */
+}
 /* Sidebar */
 .experienceSidebar {
     color: black;

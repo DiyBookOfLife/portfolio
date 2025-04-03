@@ -64,7 +64,7 @@ h1 {
 }
 
 /* Topic header */
-.goalTitle {
+.mainTitle {
     margin-bottom: 0; /* Remove bottom margin */
 }
 
@@ -75,24 +75,16 @@ h1 {
 }
 
 /* Paragraph Styling */
-.passion {
-    display: block; /* Use flexbox to layout paragraph */
-    align-items: center; /* Center the text vertically within the paragraph */
-    justify-content: center; /* Center the text horizontally */
+.aboutMe {
+    /* display: block; Use flexbox to layout paragraph */
+    /* align-items: start; Center the text vertically within the paragraph */
+    /* justify-content: stretch; Center the text horizontally */
     padding: 10px; /* Add padding around the paragraph */
     width: 600px; /* Set width of the paragraph */
     height: 300px; /* Set height of the paragraph */
     margin: 20px 0; /* Add vertical margin to separate from other elements */
 }
-/* Container for the boxes */
-.container {
-    display: grid; /* Use CSS Grid layout for the container */
-    margin: .75cm; /* Add margin around the container */
-    grid-template-columns: 15vw 15vw 15vw; /* Set grid columns with relative width */
-    grid-template-rows: 15vh 15vh; /* Set grid rows with relative height */
-    grid-gap: 15px; /* Add space between the grid items */
-    justify-content: center; /* Center the grid content */
-}
+
 
 /* Individual box styling */
 .box {
@@ -104,59 +96,27 @@ h1 {
     border-radius: 25px; /* Add rounded corners to the box */
 }
 
-/* basic footer style - no text */
-.foot {
-    display: flex; /* Use flexbox layout for header */
-    justify-content: center; /* Center the contents (buttons) horizontally */
-    background-color: rgba(197, 122, 185, 0.10); /* Set background color with slight transparency */
-    height: 70px; /* Set footer height */
-    width: 100%; /* Make sure the footer spans the full width */
-    align-items: center; /* Align items vertically in the footer */
-    color: rgb(240, 168, 234); /* Set text color for footer elements */
-    padding: 20px ; /* Add padding inside the footer */
-    position: relative;
-    left: 0;
+/* Styles for images */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-/* Style for individual cards remains the same */
-.card {
-    display: flex;/* Use flexbox */
-    flex-wrap:wrap;/* Allow items to wrap to the next line */
-    justify-content:center;/* Distribute cards evenly in the container */
-    gap: 10px;/* Space between cards */
-    width: 300px; /* Card width */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Card shadow */
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid #ccc; /* Border around the card */
-}
 .card-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.card-title {
-    font-size: .5em;
-    padding: 1px;
-    text-align: center;
-}
-
-.card-description {
-    display: flex;
-    align-items: center;
-    font-size: .5em;
-}
-
-/* Add this CSS for the container holding the cards */
 .cards-container {
     display: flex;
-    /* Use flexbox */
     flex-wrap: wrap;
-    /* Allow items to wrap to the next line */
     justify-content: space-evenly;
-    /* Distribute cards evenly in the container */
     gap: 20px;
-    /* Space between cards */
 }
 
 /* Responsive header for smaller screens */
@@ -198,6 +158,69 @@ h1 {
     }
 }
 
+/* Flip-card container */
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  gap: 30px;
+  justify-items: center; /* center cards horizontally */
+  padding: 40px 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/*Defines the 3D space for the flip*/
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  padding: 10px; */
+  margin: 10px;
+  perspective: 1000px; /* Creates 3D effect */
+}
+
+/*The rotating element (contains front/back)*/
+.flip-card-inner {
+  position: static;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/*The rotating element (contains front/back)*/
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-front {
+  /* background-color: #8b3d81; Front color */
+  background-color: rgba(228, 105, 187, 0.1); 
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.flip-card-back {
+  background-color: #f1f1f1; /* Back color */
+  color: #333;
+  transform: rotateY(180deg);
+  font-size: 14px;
+}
 /*just to see boxes - remove later*/
 
 /*** {

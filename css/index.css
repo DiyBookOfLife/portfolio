@@ -1,6 +1,6 @@
 /*global body style*/
 .mainBody{
-    font-family:sans-serif; /* Set font family for the entire body */
+    font-family: 'Inter', sans-serif; /* Set font family for the entire body */
     background-color: rgba(18, 18, 143, 0.979); /* Set background color with a blue shade and transparency */
     background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set background image */
     background-size: cover; /* Ensure the background image covers the entire body */
@@ -49,7 +49,7 @@ header.mainmenu .button {
 
 h1 {
     color: rgb(199, 88, 182);
-    font-family: 'great vibes', cursive;
+    font-family: 'Great Vibes', cursive;
     margin-right: 350px; /* Add right margin for alignment */
     margin-left: 60px; /* Add left margin for alignment */
     margin-bottom: 25px; /* Add bottom margin */
@@ -76,13 +76,10 @@ h1 {
 
 /* Paragraph Styling */
 .aboutMe {
-    /* display: block; Use flexbox to layout paragraph */
-    /* align-items: start; Center the text vertically within the paragraph */
-    /* justify-content: stretch; Center the text horizontally */
-    padding: 10px; /* Add padding around the paragraph */
-    width: 600px; /* Set width of the paragraph */
-    height: 300px; /* Set height of the paragraph */
-    margin: 20px 0; /* Add vertical margin to separate from other elements */
+    max-width: 800px;
+    padding: 20px;
+    margin: 40px auto;
+    line-height: 1.6;
 }
 
 
@@ -116,58 +113,26 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 20px;
-    padding-bottom: 50px;
+    gap: 30px;
+    padding: 0 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
-/* Responsive header for smaller screens */
-@media screen and (max-width: 768px) { 
-    header.mainmenu {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center;
-        text-align: center;
-        padding: 10px 0;
-        height: auto;
-    }
-
-    .name {
-        font-size: 50px; /* Reduce font size for smaller screens */
-        margin: 10px 0; /* Adjust spacing */
-    }
-
-    .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 10px; /* Reduce spacing between buttons */
-    }
-
-    header.mainmenu .button {
-        width: 80%; /* Make buttons take up more space */
-        font-size: 18px; /* Adjust button text size */
-    }
-
-}
-
-/* Extra small screens (phones) */
-@media screen and (max-width: 480px) {
-    .name {
-        font-size: 40px; /* Further reduce font size */
-    }
-
-    header.mainmenu .button {
-        width: 100%; /* Full width buttons */
-        font-size: 16px;
-    }
-}
 
 /* Flip-card container */
 .box-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 3px;
-  justify-items: center; /* center cards horizontally */
+  justify-items: center; 
   padding: 40px 0;
   max-width: 900px;
   margin: 0 auto;
+  /* gap: 30px;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto; */
 }
 
 /* Defines the 3D space for the flip */
@@ -228,8 +193,73 @@ h1 {
   font-size: 14px;
 }
 
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 
+.site-footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Responsive header for smaller screens */
+@media screen and (max-width: 768px) { 
+    header.mainmenu {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        text-align: center;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .name {
+        font-size: 50px; /* Reduce font size for smaller screens */
+        margin: 10px 0; /* Adjust spacing */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Reduce spacing between buttons */
+    }
+
+    header.mainmenu .button {
+        width: 80%; /* Make buttons take up more space */
+        font-size: 18px; /* Adjust button text size */
+    }
+
+}
+
+/* Extra small screens (phones) */
+@media screen and (max-width: 480px) {
+    .name {
+        font-size: 40px; /* Further reduce font size */
+    }
+
+    header.mainmenu .button {
+        width: 100%; /* Full width buttons */
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+  .box-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box-container {
+    grid-template-columns: 1fr;
+  }
+}
 /*just to see boxes - remove later*/
 
 /*** {

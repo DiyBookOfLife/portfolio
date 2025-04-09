@@ -14,10 +14,12 @@
     <header class="mainmenu sticky"> 
         <h1 class="name">Toni Thomas</h1>
         <div class="button-container">
-            <a href="index.html"><button class="button">Home</button></a>
-            <a href="education.html"><button class="button">Education</button></a>
-            <a href="experience.html"><button class="button">Experience</button></a>
-            <a href="contact.html"><button class="button">Contact</button></a>
+            
+            <button onclick="location.href='index.html'" class="button">About Me</button>
+            <button onclick="location.href='education.html'" class="button">Education</button>
+            <button onclick="location.href='experience.html'" class="button">Experience</button>
+            <button onclick="location.href='contact.html'" class="button">Contact</button>
+            <!-- <a href="contact.html"><button class="button">Contact</button></a> -->
         </div>
     </header>
 
@@ -25,109 +27,87 @@
 
 <select id="topic-select"> <!-- drop down box -->
   <option value="">--Choose an option--</option>
-  <option value="html">JavaScript</option>
-  <option value="css">Responsive Web Design</option>
-  <option value="python">Version Control</option>
-  <option value="javascript">APIs & Fetching Data</option>
-  <option value="typescripting">Node.js & Express</option>
-  <option value="git&github">UI/UX Principles</option>
+  <option value="JavaScript">JavaScript</option>
+  <option value="Responsive Web Design">Responsive Web Design</option>
+  <option value="Version Control">Version Control</option>
+  <option value="APIs & Fetching Data">APIs & Fetching Data</option>
+  <option value="UI/UX Principles">UI/UX Principles</option>
+  <option value="Node.js & Express">Node.js & Express</option>
 </select>
 
 <p class="aboutMe">I'm a passionate and driven Front-End Web Developer with a solid foundation in HTML, CSS, and JavaScript, and a strong background in IT Support. I bring a user-focused mindset, problem-solving skills, and a commitment to writing clean, responsive, and accessible code. Currently expanding my expertise in modern web technologies to build dynamic and engaging digital experiences.Here are some of my skills:</p>
 
+
+
 <!-- all flip card boxes -->
 <div class="box-container">   <!-- Holds all the cards in a grid-->
-        <div class="flip-card"> <!-- Defines the 3D space for the flip-->
-            <div class="flip-card-inner"> <!--  The rotating element (contains front/back)-->
-                <div class="flip-card-front"> <!-- The visible front face-->
-                JavaScript
-                </div>
+        <div class="flip-card" data-topic="JavaScript"> <!--Defines the 3D space for the flip -->
+            <div class="flip-card-inner">  <!--The rotating element (contains front/back)-->
+                <div class="flip-card-front">JavaScript</div>
                 <div class="flip-card-back"> <!-- The hidden back face (until flipped)-->
                 Skilled in DOM manipulation, event handling, asynchronous functions (async/await, Promises), and building dynamic user interfaces.
                 </div>
             </div>
         </div>
-
-        <div class="flip-card">
+        <div class="flip-card" data-topic="Responsive Web Design">
             <div class="flip-card-inner">
-                <div class="flip-card-front">
-                Responsive Web Design
-                </div>
+                <div class="flip-card-front">Responsive Web Design</div>
                 <div class="flip-card-back">
                 Fluent in CSS Flexbox, Grid, and media queries to ensure seamless user experiences across all screen sizes.
                 </div>
             </div>
         </div>
-
-        <div class="flip-card">
+        <div class="flip-card" data-topic="Version Control">
             <div class="flip-card-inner">
-                <div class="flip-card-front">
-                Version Control
-                </div>
+                <div class="flip-card-front">Version Control</div>
                 <div class="flip-card-back">
                 Experienced in branching, pull requests, commits, and collaboration workflows for clean project management in Git & Github.
                 </div>
             </div>
         </div>
-
-        <div class="flip-card">
+        <div class="flip-card" data-topic="APIs & Fetching Data">
             <div class="flip-card-inner">
-                <div class="flip-card-front">
-                APIs & Fetching Data
-                </div>
+                <div class="flip-card-front">APIs & Fetching Data</div>
                 <div class="flip-card-back">
                 Confident working with REST APIs, handling fetch requests, parsing JSON, and updating the DOM dynamically.
                 </div>
             </div>
         </div>
-
-        <div class="flip-card">
+        <div class="flip-card" data-topic="UI/UX Principles">
             <div class="flip-card-inner">
-                <div class="flip-card-front">
-                UI/UX Principles
-                </div>
+                <div class="flip-card-front">UI/UX Principles</div>
                 <div class="flip-card-back">
                 Focused on creating user-friendly layouts with attention to accessibility, visual hierarchy, and smooth interaction.            
                 </div>
             </div>
         </div>
-
-        <div class="flip-card">
+        <div class="flip-card" data-topic="Node.js & Express">
             <div class="flip-card-inner">
-                <div class="flip-card-front">
-                Node.js & Express
-                </div>
+                <div class="flip-card-front">Node.js & Express</div>
                 <div class="flip-card-back">
                 Able to build lightweight backend servers, set up routes, and connect front-end to server logic using Express."
                 </div>
             </div>
         </div>
-    </div>
-    <!-- <div class="box" id="two">Responsive Web Design</div> -->
-    <!-- <div class="box" id="three">Version Control</div>
-    <div class="box" id="four">APIs & Fetching Data</div>
-    <div class="box" id="five">Node.js & Express</div>
-    <div class="box" id="six">UI/UX Principles</div> -->
 </div>
 
+
+<!-- Images at the bottom of the screen-->
 <div class="cards-container">
     <div class="card-images-container">
         <img src="static/images/css1.avif" alt="Card Image" class="card-image">
-        <h5 class="card-title">Code graphics</h5>
     </div>
-
     <div class="card">
         <img src="static/images/html2.avif" alt="Card Image" class="card-image">
-        <h5 class="card-title">HTML graphics</h5>
     </div>
-
     <div class="card">
         <img src="static/images/html3.avif" alt="Card Image" class="card-image">
-        <h5 class="card-title">CSS graphics</h5>
     </div>
 </div>
 
 
-<footer class="foot"></footer>
+<!-- JavaScript -->
+<script src="js/index.js"></script>
+
 </body>
 </html>

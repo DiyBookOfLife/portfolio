@@ -115,11 +115,13 @@ mainBodybody {
 
 /* Footer */
 .experienceFooter {
+    font-size: medium;
     grid-area: ft;
     background: black;
     color: white;
     text-align: center;
     padding: 10px;
+    height: 10px;
 }
 
 .quotation {

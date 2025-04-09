@@ -35,6 +35,15 @@ body {
     margin: 0%;
 }
 
+.educationFooter {
+    font-size: medium;
+    grid-area: ft;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 10px;
+}
 
 
 /**media breakpoint**/

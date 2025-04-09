@@ -1,5 +1,6 @@
 /*global body style*/
 .mainBody{
+    font-family:sans-serif; /* Set font family for the entire body */
     background-color: rgba(18, 18, 143, 0.979); /* Set background color with a blue shade and transparency */
     background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set background image */
     background-size: cover; /* Ensure the background image covers the entire body */
@@ -10,7 +11,6 @@
     flex-direction: column; /* Stack elements vertically (default is row) */
     align-items: center; /* Center content horizontally */
     justify-content: flex-start; /* Align content to the top of the viewport */
-    height: 100vh; /* Set body height to full viewport height */
     width: 100%;
 }
 
@@ -40,7 +40,7 @@ header.mainmenu .button {
     margin: 6px; /* Add margin around the buttons */
     text-align: center; /* Center text inside the button */
     height: 35px; /* Set button height */
-    width: 100%;/* Make sure the footer spans the full width */
+    width: auto;/* Make sure the footer spans the full width */
     border-radius: 5px; /* Round the button corners */
     padding: 0 10px; /* Add padding to the left and right of buttons */
 }
@@ -49,7 +49,7 @@ header.mainmenu .button {
 
 h1 {
     color: rgb(199, 88, 182);
-    font-family: 'great vibes';
+    font-family: 'great vibes', cursive;
     margin-right: 350px; /* Add right margin for alignment */
     margin-left: 60px; /* Add left margin for alignment */
     margin-bottom: 25px; /* Add bottom margin */
@@ -117,6 +117,7 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 20px;
+    padding-bottom: 50px;
 }
 
 /* Responsive header for smaller screens */
@@ -162,22 +163,22 @@ h1 {
 .box-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
-  gap: 30px;
+  gap: 3px;
   justify-items: center; /* center cards horizontally */
   padding: 40px 0;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/*Defines the 3D space for the flip*/
+/* Defines the 3D space for the flip */
 .flip-card {
   background-color: transparent;
   width: 200px;
   height: 200px;
-  padding: 10px; */
+  padding: 10px; 
   margin: 10px;
   perspective: 1000px; /* Creates 3D effect */
-}
+} 
 
 /*The rotating element (contains front/back)*/
 .flip-card-inner {
@@ -193,6 +194,11 @@ h1 {
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
+
+.flip-card-inner.flipped{
+  transform: rotateY(180deg);
+}
+
 
 .flip-card-front, .flip-card-back {
   position: absolute;
@@ -221,6 +227,9 @@ h1 {
   transform: rotateY(180deg);
   font-size: 14px;
 }
+
+
+
 /*just to see boxes - remove later*/
 
 /*** {

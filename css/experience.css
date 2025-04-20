@@ -14,7 +14,7 @@ mainBody {
     flex-direction: column; /* Stack elements vertically (default is row) */
     align-items: center; /* Center content horizontally */
     justify-content: flex-start; /* Align content to the top of the viewport */
-    height: 100vh; /* Set body height to full viewport height */
+    min-height: 100vh; /* Set body height to full viewport height */
     width: 100%;
 }
 

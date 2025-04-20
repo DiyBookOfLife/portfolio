@@ -2,8 +2,8 @@ h1.name {
   font-family: 'Great Vibes', cursive;
 }
 
-mainBodybody {
-    font-family: font-family: 'Inter', sans-serif;
+mainBody {
+    font-family: 'Inter', sans-serif;
     background-color: rgba(18, 18, 143, 0.979); /* Set background color with a blue shade and transparency */
     background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set background image */
     background-size: cover; /* Ensure the background image covers the entire body */
@@ -137,17 +137,48 @@ mainBodybody {
     margin: 0 auto; /* Centers horizontally */
 }
 
-/* Responsive Grid Adjustments */
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 @media (max-width: 900px) {
     .experience-container {
         grid-template-columns: repeat(2, 1fr);
-        /* Two columns */
+        
     }
 }
 
 @media (max-width: 600px) {
     .experience-container {
         grid-template-columns: 1fr;
-        /* Single column */
+        
     }
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }

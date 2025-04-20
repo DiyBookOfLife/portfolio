@@ -4,7 +4,7 @@ h1.name {
 
 body {
     font-family: 'Inter', sans-serif;
-    display: box;
+    display: flex;
     background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set background image */
     background-size: cover; /* Ensure the background image covers the entire body */ 
     font-size: 25px; /* Set font size for text */
@@ -18,7 +18,8 @@ body {
 }
 
 .educationWrapper {
-    width: 400px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid; /** Grid display**/
     color: #444;
 }
@@ -32,12 +33,11 @@ body {
 }
 
 .cert-item {
-    color: #fff;
-    padding: 10px;
-    font-size: 120%;
-    width: 650px;
-    height: 500px;
-    margin: 0%;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .educationFooter {
@@ -50,17 +50,32 @@ body {
     height: 10px;
 }
 
-
-/**media breakpoint**/
-/* @media (min-width: 600px) {.box {
+@media (max-width: 768px) {
+  .educationBody .educationWrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
     display: flex;
-    align-items: center; Stretch vertically 
-    justify-content: left; Stretch horizontally 
-    background-color: #444; 
-    color: #fff; 
-    border-radius: 5px;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .educationBody .certifications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .educationBody .certifications figure {
+    width: 100%;
     margin: 0;
-    font-size: 150%;
-    }
-*/
+  }
+
+  .educationBody .cert-item {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

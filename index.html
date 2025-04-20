@@ -1,114 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toni's Project</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<!-- Body -->
-<body class="mainBody">
+  <!-- Body Begin -->
+  <body class="mainBody">
     <!-- Banner - Sticky for all pages -->
-    <header class="mainmenu sticky"> 
-        <h1 class="name">Toni Thomas</h1>
-        <div class="button-container">
-            <a href="index.html"><button class="button">About Me</button></a>
-            <a href="education.html"><button class="button">Education</button></a>
-            <a href="experience.html"><button class="button">Experience</button></a>
-            <a href="contact.html"><button class="button">Contact</button></a>
-        </div>
+    <header class="mainmenu sticky">
+      <h1 class="name">Toni Thomas</h1>
+      <div class="button-container">
+        <a href="index.html"><button class="button">About Me</button></a>
+        <a href="education.html"><button class="button">Education</button></a>
+        <a href="experience.html"><button class="button">Experience</button></a>
+        <a href="contact.html"><button class="button">Contact</button></a>
+      </div>
     </header>
 
-<h2 class="mainTitle">Front-End Web Developement</h2> <!-- Topic -->
+    <!-- Page Title -->
+    <h2 class="mainTitle">Front-End Web Developement</h2>
 
-<select id="topic-select"> <!-- drop down box -->
-  <option value="">--Choose an option--</option>
-  <option value="JavaScript">JavaScript</option>
-  <option value="Responsive Web Design">Responsive Web Design</option>
-  <option value="Version Control">Version Control</option>
-  <option value="APIs & Fetching Data">APIs & Fetching Data</option>
-  <option value="UI/UX Principles">UI/UX Principles</option>
-  <option value="Node.js & Express">Node.js & Express</option>
-</select>
+    <!-- drop down box -->
+    <select id="topic-select">
+      <option value="">--Explore a Technology --</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="Responsive Web Design">Responsive Web Design</option>
+      <option value="Version Control">Version Control</option>
+      <option value="APIs & Fetching Data">APIs & Fetching Data</option>
+      <option value="UI/UX Principles">UI/UX Principles</option>
+      <option value="Node.js & Express">Node.js & Express</option>
+      <option value="Sass & Bootstrap">Sass & Bootstrap</option>
+      <option value="React">React</option>
+    </select>
 
-<section class="section"><p class="aboutMe">I'm a passionate and driven Front-End Web Developer with a solid foundation in HTML, CSS, and JavaScript, and a strong background in IT Support. I bring a user-focused mindset, problem-solving skills, and a commitment to writing clean, responsive, and accessible code. Currently expanding my expertise in modern web technologies to build dynamic and engaging digital experiences.Here are some of my skills:</p></section>
+    <!--About Me Section-->
+    <section class="sectionAboutMe">
+      <p class="aboutMe">
+        I’m a passionate and dedicated Front-End Web Developer with a solid
+        foundation in HTML, CSS, and JavaScript, and a strong background in IT
+        Support. I bring a user-focused mindset, strong problem-solving
+        abilities, and a commitment to writing clean, accessible, and
+        responsivel code. Currently deepening my skills in modern frameworks
+        like React, I thrive on building dynamic, interactive web experiences
+        and continuously growing as a developer. I’m eager to contribute to a
+        collaborative team and bring real value to meaningful projects.
+      </p>
+    </section>
 
-
-
-<!-- all flip card boxes -->
-<div class="box-container">   <!-- Holds all the cards in a grid-->
-        <div class="flip-card" data-topic="JavaScript"> <!--Defines the 3D space for the flip -->
-            <div class="flip-card-inner">  <!--The rotating element (contains front/back)-->
-                <div class="flip-card-front">JavaScript</div>
-                <div class="flip-card-back"> <!-- The hidden back face (until flipped)-->
-                Skilled in DOM manipulation, event handling, asynchronous functions (async/await, Promises), and building dynamic user interfaces.
-                </div>
-            </div>
+    <!--Projects Section-->
+    <section class="projects-section">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <!--Project 1-->
+        <div class="project-card">
+          <h3>Weather Journal App</h3>
+          <img src="static/images/WJProject.png" alt="Weather App Screenshot" />
+          <p>
+            A simple app that fetches weather data using an external API and
+            updates the UI dynamically using JavaScript.
+          </p>
+          <p>
+            <strong>Tech Used:</strong> HTML, CSS, JS, OpenWeatherMap API,
+            Express
+          </p>
+          <a
+            href="https://github.com/DiyBookOfLife/weather-journal-app"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://diybookoflife.github.io/weather-journal-app/"
+            target="_blank"
+            >Live Demo</a
+          >
         </div>
-        <div class="flip-card" data-topic="Responsive Web Design">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">Responsive Web Design</div>
-                <div class="flip-card-back">
-                Fluent in CSS Flexbox, Grid, and media queries to ensure seamless user experiences across all screen sizes.
-                </div>
-            </div>
+        <!-- Duplicate this card for more projects -->
+        <!--Project 2-->
+        <div class="project-card">
+          <h3>Landing Page</h3>
+          <img
+            src="static/images/LPProject.png"
+            alt="Landing Page Screenshot"
+          />
+          <p>
+            A responsive landing page built from scratch using semantic HTML and
+            modern CSS techniques. This project emphasizes clean layout design,
+            smooth navigation, and consistent styling to create an engaging
+            first impression for users.
+          </p>
+          <p>
+            <strong>Tech Used:</strong> HTML5, CSS3, Flexbox, Grid, Media Queries
+          </p>
+          <a
+            href="https://github.com/DiyBookOfLife/landing-project"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://diybookoflife.github.io/landing-project/"
+            target="_blank"
+            >Live Demo</a
+          >
         </div>
-        <div class="flip-card" data-topic="Version Control">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">Version Control</div>
-                <div class="flip-card-back">
-                Experienced in branching, pull requests, commits, and collaboration workflows for clean project management in Git & Github.
-                </div>
-            </div>
-        </div>
-        <div class="flip-card" data-topic="APIs & Fetching Data">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">APIs & Fetching Data</div>
-                <div class="flip-card-back">
-                Confident working with REST APIs, handling fetch requests, parsing JSON, and updating the DOM dynamically.
-                </div>
-            </div>
-        </div>
-        <div class="flip-card" data-topic="UI/UX Principles">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">UI/UX Principles</div>
-                <div class="flip-card-back">
-                Focused on creating user-friendly layouts with attention to accessibility, visual hierarchy, and smooth interaction.            
-                </div>
-            </div>
-        </div>
-        <div class="flip-card" data-topic="Node.js & Express">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">Node.js & Express</div>
-                <div class="flip-card-back">
-                Able to build lightweight backend servers, set up routes, and connect front-end to server logic using Express."
-                </div>
-            </div>
-        </div>
-</div>
+        <!--Project 3-->
+    </section>
 
-
-<!-- Images at the bottom of the screen-->
-<div class="cards-container">
-    <div class="card-images-container">
-        <img src="static/images/css1.avif" alt="Card Image" class="card-image">
+    <!-- all flip card boxes -->
+    <div class="box-container">
+      <!-- Holds all the cards in a grid-->
+      <div class="flip-card" data-topic="JavaScript">
+        <!--Defines the 3D space for the flip -->
+        <div class="flip-card-inner">
+          <!--The rotating element (contains front/back)-->
+          <div class="flip-card-front">JavaScript</div>
+          <div class="flip-card-back">
+            <!-- The hidden back face (until flipped)-->
+            Skilled in DOM manipulation, event handling, asynchronous functions
+            (async/await, Promises), and building dynamic user interfaces.
+          </div>
+        </div>
+      </div>
+      <!--Card 2 -->
+      <div class="flip-card" data-topic="Responsive Web Design">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Responsive Web Design</div>
+          <div class="flip-card-back">
+            Fluent in CSS Flexbox, Grid, and media queries to ensure seamless
+            user experiences across all screen sizes.
+          </div>
+        </div>
+      </div>
+      <!--Card 3 -->
+      <div class="flip-card" data-topic="Version Control">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Version Control</div>
+          <div class="flip-card-back">
+            Experienced in branching, pull requests, commits, and collaboration
+            workflows for clean project management in Git & Github.
+          </div>
+        </div>
+      </div>
+      <!--Card 4 -->
+      <div class="flip-card" data-topic="APIs & Fetching Data">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">APIs & Fetching Data</div>
+          <div class="flip-card-back">
+            Confident working with REST APIs, handling fetch requests, parsing
+            JSON, and updating the DOM dynamically.
+          </div>
+        </div>
+      </div>
+      <!--Card 5 -->
+      <div class="flip-card" data-topic="UI/UX Principles">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">UI/UX Principles</div>
+          <div class="flip-card-back">
+            Focused on creating user-friendly layouts with attention to
+            accessibility, visual hierarchy, and smooth interaction.
+          </div>
+        </div>
+      </div>
+      <!--Card 6 -->
+      <div class="flip-card" data-topic="Node.js & Express">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Node.js & Express</div>
+          <div class="flip-card-back">
+            Able to build lightweight backend servers, set up routes, and
+            connect front-end to server logic using Express.
+          </div>
+        </div>
+      </div>
+      <!--Card 7 -->
+      <div class="flip-card" data-topic="Sass & Bootstrap">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Sass & Bootstrap</div>
+          <div class="flip-card-back">
+            Experienced using Bootstrap’s utility classes and 
+            Sass for organized, modular, and scalable CSS. Strong 
+            focus on clean and responsive styling.
+          </div>
+        </div>
+      </div>
+      <!--Card 8 -->
+      <div class="flip-card" data-topic="React">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">React</div>
+          <div class="flip-card-back">
+            Comfortable using React to build component-based UIs, 
+            manage state, and create dynamic single-page applications 
+            with reusable logic."
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="card">
-        <img src="static/images/html2.avif" alt="Card Image" class="card-image">
+
+    <!-- Images at the bottom of the screen-->
+    <div class="cards-container">
+      <div class="card">
+        <img
+          src="static/images/css1.avif"
+          alt="Card Image"
+          class="card-image"
+        />
+      </div>
+      <div class="card">
+        <img
+          src="static/images/html2.avif"
+          alt="Card Image"
+          class="card-image"
+        />
+      </div>
+      <div class="card">
+        <img
+          src="static/images/html3.avif"
+          alt="Card Image"
+          class="card-image"
+        />
+      </div>
     </div>
-    <div class="card">
-        <img src="static/images/html3.avif" alt="Card Image" class="card-image">
-    </div>
-</div>
 
-<footer class="site-footer">
-  © Toni Thomas 2025 · Built with ❤️ in HTML, CSS, and JavaScript
-</footer>
+    <footer class="site-footer">© Toni Thomas 2025 ❤️</footer>
 
-<!-- JavaScript -->
-<script src="js/index.js"></script>
-
-</body>
+    <!-- JavaScript -->
+    <script src="js/index.js"></script>
+  </body>
 </html>

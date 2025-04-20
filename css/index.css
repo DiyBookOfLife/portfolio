@@ -1,151 +1,169 @@
-/*global body style*/
-.mainBody{
-    font-family: 'Inter', sans-serif; /* Set font family for the entire body */
-    background-color: rgba(18, 18, 143, 0.979); /* Set background color with a blue shade and transparency */
-    background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set background image */
-    background-size: cover; /* Ensure the background image covers the entire body */
-    color: rgb(237, 243, 223); /* Set text color to a light cream shade */
-    font-size: 25px; /* Set font size for text */
-    text-align: center; /* Center align text horizontally */
-    display: flex; /* Use flexbox layout to position content */
-    flex-direction: column; /* Stack elements vertically (default is row) */
-    align-items: center; /* Center content horizontally */
-    justify-content: flex-start; /* Align content to the top of the viewport */
-    width: 100%;
+/* Main body styling for layout, color, and typography */
+.mainBody {
+  font-family: 'Inter', sans-serif;
+  background-color: rgba(97, 35, 92, 0.979);
+  background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  color: rgb(237, 243, 223);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-/* Container to hold the buttons */
+/* Layout container for nav buttons */
 .button-container {
-    display: flex; /* Use flexbox layout for horizontal arrangement */
-    gap: 30px; /* Space out the buttons with 20px gap between them */
+  display: flex;
+  gap: 30px;
 }
 
-/* Header background */
+/* Navigation bar and header styling */
 header.mainmenu {
-    display: flex; /* Use flexbox layout for header */
-    left: 0;
-    width: 100%;
-    justify-content: center; /* Center the contents (buttons) horizontally */
-    background-color: rgba(197, 122, 185, 0.10); /* Set background color with slight transparency */
-    height: 70px; /* Set header height */
-    align-items: center; /* Align items vertically in the header */
-    color: rgb(240, 168, 234); /* Set text color for header elements */
-    padding: 20px 0; /* Add padding inside the header */
+  display: flex;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  background-color: rgba(197, 122, 185, 0.10);
+  height: 70px;
+  align-items: center;
+  color: rgb(240, 168, 234);
+  padding: 20px 0;
 }
 
-/* Buttons inside the header */
+/* Navigation buttons inside header */
 header.mainmenu .button {
-    color: rgb(247, 243, 246); /* Set button text color */
-    background-color: rgb(139, 61, 129);
-    margin: 6px; /* Add margin around the buttons */
-    text-align: center; /* Center text inside the button */
-    height: 35px; /* Set button height */
-    width: auto;/* Make sure the footer spans the full width */
-    border-radius: 5px; /* Round the button corners */
-    padding: 0 10px; /* Add padding to the left and right of buttons */
+  color: rgb(247, 243, 246);
+  background-color: rgb(139, 61, 129);
+  margin: 6px;
+  text-align: center;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0 10px;
 }
 
-/* Cursive Name styling */
-
+/* Site name/title styling */
 h1 {
-    color: rgb(199, 88, 182);
-    font-family: 'Great Vibes', cursive;
-    margin-right: 350px; /* Add right margin for alignment */
-    margin-left: 60px; /* Add left margin for alignment */
-    margin-bottom: 25px; /* Add bottom margin */
-    font-size: 100px; /* Set font size for the heading */
+  color: rgb(199, 88, 182);
+  font-family: 'Great Vibes', cursive;
+  margin: 0 60px 25px 60px;
+  font-size: clamp(2rem, 8vw, 100px);
 }
 
-/* Sticky banner (header stays on top when scrolling) */
-.sticky {
-    position: sticky; /* Make the header sticky */
-    top: 0; /* Keep it at the top of the viewport */
-    z-index: 1000;
-}
-
-/* Topic header */
+/* Section title styling */
 .mainTitle {
-    margin-bottom: 0; /* Remove bottom margin */
+  margin-bottom: 0;
 }
 
-/* Dropdown Box Styling */
+/* Dropdown styling for skill selection */
 #topic-select {
-    margin: .5cm; /* Add margin around the dropdown box */
-    color: rgb(168, 41, 41); /* Set text color for dropdown options */
+  margin: 0.5cm;
+  color: rgb(168, 41, 41);
 }
 
-/* Paragraph Styling */
+/* About Me paragraph styling */
 .aboutMe {
-    max-width: 800px;
-    padding: 20px;
-    margin: 40px auto;
-    line-height: 1.6;
+  max-width: 800px;
+  padding: 20px;
+  margin: 20px auto;
+  line-height: 1.6;
+  text-align: center;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 40px;
 }
 
+/* Project card paragraph styling */
+.project-card p {
+  max-width: 800px;
+  text-align: center;
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 60px;
+}
 
-/* Individual box styling */
+.project-card {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 40px;
+}
+/* .project-card:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 40px;
+} */
+
+/* Image styling inside project cards */
+.project-card img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+/* Skill box styling */
 .box {
-    display: flex; /* Use flexbox for centering content inside the box */
-    align-items: center; /* Center content vertically inside the box */
-    justify-content: center; /* Center content horizontally inside the box */
-    border: 1px solid rgba(228, 105, 187, 0.1); /* Add a border around the box */
-    background-color: rgba(228, 105, 187, 0.1); /* Set background color inside the box */
-    border-radius: 25px; /* Add rounded corners to the box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(228, 105, 187, 0.1);
+  background-color: rgba(228, 105, 187, 0.1);
+  border-radius: 25px;
 }
 
-/* Styles for images */
+/* Image container card styling */
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
+/* Image element styling */
 .card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
+/* Container for grouping image cards */
 .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 30px;
-    padding: 0 20px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 0 20px;
+  margin: 60px auto;
+
 }
 
-
-/* Flip-card container */
+/* Flip card container grid */
 .box-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 3px;
-  justify-items: center; 
+  justify-items: center;
   padding: 40px 0;
   max-width: 900px;
   margin: 0 auto;
-  /* gap: 30px;
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto; */
 }
 
-/* Defines the 3D space for the flip */
+/* Flip card box setup */
 .flip-card {
   background-color: transparent;
   width: 200px;
   height: 200px;
-  padding: 10px; 
+  padding: 10px;
   margin: 10px;
-  perspective: 1000px; /* Creates 3D effect */
-} 
+  perspective: 1000px;
+}
 
-/*The rotating element (contains front/back)*/
+/* Flip card inner rotation logic */
 .flip-card-inner {
   position: static;
   width: 100%;
@@ -155,16 +173,17 @@ h1 {
   transform-style: preserve-3d;
 }
 
-/*The rotating element (contains front/back)*/
+/* Flip animation on hover */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-inner.flipped{
+/* Class to manually apply flip */
+.flip-card-inner.flipped {
   transform: rotateY(180deg);
 }
 
-
+/* Front/back shared styling for flip cards */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -178,28 +197,23 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Flip card front style */
 .flip-card-front {
-  /* background-color: #8b3d81; Front color */
-  background-color: rgba(228, 105, 187, 0.1); 
+  background-color: rgba(228, 105, 187, 0.1);
   color: white;
   font-weight: bold;
   font-size: 18px;
 }
 
+/* Flip card back style */
 .flip-card-back {
-  background-color: #f1f1f1; /* Back color */
+  background-color: #f1f1f1;
   color: #333;
   transform: rotateY(180deg);
   font-size: 14px;
 }
 
-.section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-
+/* Footer section */
 .site-footer {
   background: black;
   color: white;
@@ -210,45 +224,45 @@ h1 {
   margin-top: auto;
 }
 
-/* Responsive header for smaller screens */
-@media screen and (max-width: 768px) { 
-    header.mainmenu {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center;
-        text-align: center;
-        padding: 10px 0;
-        height: auto;
-    }
+/* Responsive header styles for tablets */
+@media screen and (max-width: 768px) {
+  header.mainmenu {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+    height: auto;
+  }
 
-    .name {
-        font-size: 50px; /* Reduce font size for smaller screens */
-        margin: 10px 0; /* Adjust spacing */
-    }
+  .name {
+    font-size: 50px;
+    margin: 10px 0;
+  }
 
-    .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 10px; /* Reduce spacing between buttons */
-    }
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    header.mainmenu .button {
-        width: 80%; /* Make buttons take up more space */
-        font-size: 18px; /* Adjust button text size */
-    }
-
+  header.mainmenu .button {
+    width: 80%;
+    font-size: 18px;
+  }
 }
 
-/* Extra small screens (phones) */
+/* Responsive header styles for phones */
 @media screen and (max-width: 480px) {
-    .name {
-        font-size: 40px; /* Further reduce font size */
-    }
+  .name {
+    font-size: 40px;
+  }
 
-    header.mainmenu .button {
-        width: 100%; /* Full width buttons */
-        font-size: 16px;
-    }
+  header.mainmenu .button {
+    width: 100%;
+    font-size: 16px;
+  }
 }
 
+/* Responsive layout for flip card grid */
 @media screen and (max-width: 900px) {
   .box-container {
     grid-template-columns: repeat(2, 1fr);
@@ -260,8 +274,38 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
-/*just to see boxes - remove later*/
 
-/*** {
-    border: 1px solid red !important;
+/* Base body styling (mobile-first) */
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
+
+/* Responsive tweaks for small screen containers */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* DEV NOTE: Temporary debug borders (remove later) */
+/*** {
+  border: 1px solid red !important;
+}*/

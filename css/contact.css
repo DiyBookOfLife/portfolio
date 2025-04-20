@@ -37,6 +37,27 @@ h1.name {
     color: azure;
  }
 
+/* Mobile responsiveness */
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
 
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
 
 

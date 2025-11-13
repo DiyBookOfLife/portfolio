@@ -10,7 +10,7 @@ import Contact from "./components/Contact.jsx";
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio">
+    <BrowserRouter basename="/react-portfolio">
       <Header />
       <main>
         <Routes>

@@ -1,0 +1,115 @@
+h1.name {
+  font-family: "Great Vibes", cursive;
+}
+
+.educationBody {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  background-image: url("https://images.unsplash.com/photo-1637682184683-74e6d34ed72d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  font-size: 25px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0; /* No global margin */
+  padding: 40px; /* Use padding instead if needed */
+}
+
+.educationWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid; /** Grid display**/
+  color: #444;
+}
+
+.certifications {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(340px, 33vw, 420px), 1fr)
+  );
+  gap: clamp(16px, 2vw, 24px);
+  margin-top: 16px;
+}
+
+/* uniform image slot */
+.certifications img.cert-item {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* consistent box for every cert */
+  object-fit: contain; /* keep original proportions */
+  background: transparent; /* subtle letterbox for odd ratios */
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+.educationFooter {
+  font-size: medium;
+  grid-area: ft;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  height: 10px;
+}
+
+@media (max-width: 768px) {
+  .educationBody .educationWrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .educationBody .certifications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .educationBody .certifications figure {
+    width: 100%;
+    margin: 0;
+  }
+
+  .educationBody .cert-item {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Card */
+.certifications figure {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  padding: 14px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.certifications figure:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Caption */
+.certifications figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.3;
+}

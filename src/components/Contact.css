@@ -1,0 +1,64 @@
+.contact-page {
+  display: grid;
+  place-items: center;
+  padding: 32px 16px 64px;
+}
+
+.contact-hero {
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-hero h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+}
+
+.contact-intro {
+  margin: 0 auto 16px;
+  color: #e9e9e9;
+  line-height: 1.5;
+  max-width: 56ch;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 12px 0 8px;
+}
+
+/* reuse your pink button look */
+.contact-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px; /* good tap target */
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: rgb(139, 61, 129);
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+}
+
+/* Optional small, readable quote */
+.contact-quote {
+  margin: 18px auto 0;
+  max-width: 60ch;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* tighten on small phones */
+@media (max-width: 480px) {
+  .contact-actions .btn {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    min-width: 44%;
+  }
+}

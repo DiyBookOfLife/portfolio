@@ -1,0 +1,242 @@
+/* ===== Experience page frame ===== */
+.experience-page .container {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding: clamp(16px, 3vw, 32px);
+}
+
+.experience-page .page-title {
+  margin: 0 0 1.25rem;
+}
+
+/* ===== Card list layout ===== */
+.experience-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+/* ===== Job card ===== */
+.experience-page {
+  --card-bg: #111;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-radius: 16px;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.job-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: clamp(16px, 2.2vw, 24px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.job-card:hover,
+.job-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Header: title left, dates right (wraps on narrow screens) */
+.job-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.job-title {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.35rem);
+  line-height: 1.25;
+}
+
+.job-dates {
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* Bullets spacing */
+.job-points {
+  margin: 8px 0 0;
+  padding-left: 1.1rem;
+}
+.job-points li {
+  margin: 0.35rem 0;
+}
+
+@media (max-width: 480px) {
+  .job-card {
+    padding: 16px;
+  }
+  .job-dates {
+    width: 100%;
+  }
+}
+
+/* ===== 1) Center the page & add breathing room ===== */
+.experience-container,
+.experienceBody,
+.experience-wrapper,
+main.experience,
+#experience {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding: clamp(16px, 3vw, 32px);
+}
+
+/* ===== 2) Card look built from existing headings & lists ===== */
+/* Card top: the job title <h3> when it is followed by a UL (optionally via a date <p>) */
+.experience-container h3:has(+ ul),
+.experience-container h3:has(+ p + ul),
+.experienceBody h3:has(+ ul),
+.experienceBody h3:has(+ p + ul) {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  padding: 16px 20px 8px;
+  margin-top: 16px;
+}
+
+/* Optional date line between the title and bullet list */
+.experience-container h3 + p:has(+ ul),
+.experienceBody h3 + p:has(+ ul) {
+  background: #111;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 0;
+  padding: 0 20px 8px;
+  opacity: 0.85; /* looks like a subtle 'dates' style */
+  font-size: 0.95rem;
+}
+
+/* Card bottom: the bullet list */
+.experience-container h3 + ul,
+.experienceContainer h3 + ul,
+.experienceBody h3 + ul,
+.experience-container h3 + p + ul,
+.experienceBody h3 + p + ul {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  padding: 10px 28px 16px;
+  margin-top: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover/focus elevation */
+.experience-container h3 + ul:hover,
+.experienceBody h3 + ul:hover,
+.experience-container h3 + p + ul:hover,
+.experienceBody h3 + p + ul:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Bullet spacing & typography inside cards */
+.experience-container h3,
+.experienceBody h3 {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.35rem);
+  line-height: 1.25;
+}
+.experience-container ul,
+.experienceBody ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.experience-container li,
+.experienceBody li {
+  margin: 0.35rem 0;
+}
+
+/* Mobile niceties */
+@media (max-width: 480px) {
+  .experience-container,
+  .experienceBody {
+    padding: 16px;
+  }
+}
+
+/* ===== Page frame: center content & add breathing room ===== */
+.experiencePage .experienceContent {
+  width: min(1100px, 100%);
+  margin-inline: auto;
+  padding: clamp(16px, 3vw, 32px);
+}
+
+.experiencePage .experienceContent > h2 {
+  margin: 0 0 1.25rem;
+}
+
+/* ===== Card tokens (tweak these to match your project cards) ===== */
+.experienceItem {
+  --card-bg: #111;
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-radius: 16px;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); /* swap to your project card shadow if needed */
+
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: clamp(16px, 2.2vw, 24px) clamp(18px, 3vw, 28px);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Elevation on hover/focus */
+.experienceItem:hover,
+.experienceItem:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Spacing between cards */
+.experienceItem + .experienceItem {
+  margin-top: clamp(16px, 2vw, 24px);
+}
+
+/* Title */
+.experienceItem h3 {
+  margin: 0 0 6px;
+  font-size: clamp(1.05rem, 1.2vw + 0.9rem, 1.35rem);
+  line-height: 1.25;
+}
+
+/* Date: top-right on desktop */
+.experienceItem .date {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+/* Bullets */
+.experienceItem ul {
+  margin: 8px 0 0;
+  padding-left: 1.1rem;
+}
+.experienceItem li {
+  margin: 0.35rem 0;
+}
+
+/* Mobile: let the date drop under the title */
+@media (max-width: 560px) {
+  .experienceItem .date {
+    position: static;
+    display: block;
+    margin: 2px 0 6px;
+  }
+}
